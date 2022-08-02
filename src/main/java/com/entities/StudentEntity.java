@@ -4,9 +4,10 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "TB_STUDENTS")
+@Table(name = "TB_STUDENT")
 public class StudentEntity implements Serializable {
 
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
@@ -20,7 +21,9 @@ public class StudentEntity implements Serializable {
     private String gender;
     private int phone;
     private String personal_identification;
+    @Column(nullable = false,unique = true, updatable = false)
     private String passwordAcces;
+    @Column(nullable = false, updatable = false)
     private String studentCode;
 
     public StudentEntity(long id, String first_name, String last_name, String email, String date_of_brith, ProvinceEntity province, String gender, int phone, String personal_identification, String passwordAcces, String studentCode) {

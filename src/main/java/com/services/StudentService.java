@@ -32,6 +32,10 @@ public class StudentService {
         return new StudentDTO(student);
 
     }
+
+    public StudentEntity updateStudent(StudentEntity student){
+        return studentRepository.save(student);
+    }
     public List<StudentDTO> findAllStudent(){
        List<StudentEntity> list = studentRepository.findAll();
        return list.stream().map(x -> new StudentDTO(x)).collect(Collectors.toList());
@@ -42,9 +46,7 @@ public class StudentService {
         StudentDTO dto = new StudentDTO(student);
         return dto;
     }
-    public StudentEntity updateStudent(StudentEntity student){
-        return studentRepository.save(student);
-    }
+
 
     public void deleteStudent(StudentEntity student){
         studentRepository.delete(student);

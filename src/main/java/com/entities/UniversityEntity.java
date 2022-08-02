@@ -13,7 +13,7 @@ public class UniversityEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @Column(nullable = false, unique = true, length = 60)
+    @Column(nullable = false, unique = true)
     private String name;
 
     @Column(nullable = false, unique = true, length = 160)

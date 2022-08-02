@@ -8,7 +8,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "TB_COURSE")
 public class CourseEntity implements Serializable {
-    private final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,6 +16,9 @@ public class CourseEntity implements Serializable {
 
     @Column(nullable = false, unique = true, length = 160)
     private String courseName;
+
+    @Column(nullable = false, updatable = false)
+    private String courseCode;
 
     public CourseEntity(long id, String courseName) {
         this.id = id;
@@ -43,6 +46,14 @@ public class CourseEntity implements Serializable {
 
     public void setCourseName(String courseName) {
         this.courseName = courseName;
+    }
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
     }
 
     @Override

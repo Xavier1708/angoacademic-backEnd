@@ -3,8 +3,6 @@ package com.dtos;
 public class StudentInsertDTO extends StudentDTO{
 
     private String passwordAcces;
-
-
     public StudentInsertDTO() {
         super();
     }

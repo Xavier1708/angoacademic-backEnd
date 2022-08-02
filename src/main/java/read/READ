@@ -1,0 +1,39 @@
+AQUI SERA O LOCAL ONDE VAMOS REGISTAR CADA PONTO DA NOSSA API.
+
+Neste momento ainda so estamos a implementar o crud das nossas classes, e não as regras de negocios em si
+1.1 ) - Ate aqui ja foi criada as classes principais do nosso back-end
+1.1.1 ) - Ja temos o crud complet da clase : University
+
+
+
+
+
+
+
+
+
+
+
+
+____________________________________|
+FOCO PARA AMANHA                    |
+____________________________________|
+- Acabar o crud das classes independentes.
+- Acabar o crud e implementar algumas das regras de negocios da class 'application'.s
+
+
+
+____________________________________|
+CRUD COMPLETO                       |
+____________________________________|
+- University
+
+
+
+
+
+
+
+
+
+
